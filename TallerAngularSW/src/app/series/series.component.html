@@ -1,0 +1,33 @@
+<nav class="navbar" style="background-color: #24A2B8;">
+  <div class="container-fluid">
+      <a class="navbar-brand" style="color: 313131;">
+          <img src="https://pbs.twimg.com/profile_images/993674618652254208/dYmlscab_400x400.jpg" alt="page icon" width="35px" class="d-inline-block ">
+          TV Series
+      </a>
+  </div>
+</nav>
+<div class="container-fluid" id ="tabla">
+  <div class="col-4">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th><b>#</b></th>
+          <th><b>Name</b></th>
+          <th><b>Channel</b></th>
+          <th><b>Seasons</b></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ser of series">
+          <td><b>{{ser.id}}</b></td>
+          <td>
+            <dd><a href={{ser.linkWebPage}}>{{ser.name}}</a></dd>
+          </td>
+          <td>{{ser.channel}}</td>
+          <td>{{ser.seasons}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Seasons average: {{seasonsAverage}}</p>
+  </div>
+</div>
